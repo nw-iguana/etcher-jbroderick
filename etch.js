@@ -1,6 +1,6 @@
 // Add Event Listeners here:
 function makeActive() {
-  $('.cell').hover(function(event) {
+  $('.grid').on('mouseover', '.cell', function(event) {
     $(this).addClass('active');
   })
 }
@@ -12,7 +12,6 @@ $(() => {
   makeActive();
   $('button').on('click', function(){
     createAndPlaceRows(8);
-    makeActive()
   })
 
   // Bind your event listeners here:
