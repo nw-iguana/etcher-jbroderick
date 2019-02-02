@@ -1,20 +1,18 @@
 // Add Event Listeners here:
-
+function makeActive() {
+  $('.cell').hover(function(event) {
+    $(this).addClass('active');
+  })
+}
 
 
 // When DOM is ready:
 $(() => {
   createAndPlaceRows(8);
-  $('.cell').hover(function(event) {
-    console.log('hovering!');
-    $(this).addClass('active');
-  })
+  makeActive();
   $('button').on('click', function(){
     createAndPlaceRows(8);
-    $('.cell').hover(function(event) {
-      console.log('hovering!');
-      $(this).addClass('active');
-    })
+    makeActive()
   })
 
   // Bind your event listeners here:
